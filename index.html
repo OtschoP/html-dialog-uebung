@@ -17,10 +17,21 @@
         </section>
 
         <footer>
-            <button id="closeDialog">Schließen</button>
+            <button onclick="closeDialog()" id="closeDialog">Schließen</button>
         </footer>
     </dialog>
-    <button id="openDialog">Dialog öffnen</button>
+    <button onclick="openDialog()" id="openDialog">Dialog öffnen</button>
 
+
+    <script>
+        const dialogRef = document.getElementById('myDialog');
+        
+        function openDialog() {
+            dialogRef.showModal();
+        } 
+        function closeDialog() {
+            dialogRef.close();
+        }
+    </script>
 </body>
 </html>
