@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dialog Übung</title>
 </head>
+
 <body>
     <h1>Übung Dialog Fenster öffnen</h1>
 
-    <dialog id="myDialog">
+    <button aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" id="openDialog">Dialog öffnen</button>
+
+    <dialog id="myDialog" aria-labelledby="dialogTitle" aria-describedby="dialogDescr">
         <header>
-            <h2>Dialog Titel</h2>
+            <h2 id="dialogTitle">Dialog Titel</h2>
         </header>
         <section>
-            <p>Dies ist der Inhalt des Dialogs.</p>
+            <p id="dialogDescr">Dies ist der Inhalt des Dialogs.</p>
         </section>
 
         <footer>
-            <button onclick="closeDialog()" id="closeDialog">Schließen</button>
+            <button aria-label="Dialog schließen" onclick="closeDialog()" id="closeDialog">Schließen</button>
         </footer>
     </dialog>
-    <button onclick="openDialog()" id="openDialog">Dialog öffnen</button>
+
 
 
     <script>
         const dialogRef = document.getElementById('myDialog');
-        
+
         function openDialog() {
             dialogRef.showModal();
-        } 
+        }
         function closeDialog() {
             dialogRef.close();
         }
     </script>
 </body>
+
 </html>
