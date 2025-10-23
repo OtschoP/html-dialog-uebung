@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <title>Dialog Übung</title>
 </head>
 
 <body>
     <h1>Übung Dialog Fenster öffnen</h1>
 
-    <button aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" id="openDialog">Dialog öffnen</button>
+    <button aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" id="openDialog">Dialog
+        öffnen</button>
 
     <dialog id="myDialog" aria-labelledby="dialogTitle" aria-describedby="dialogDescr">
         <header>
@@ -26,17 +28,7 @@
     </dialog>
 
 
-
-    <script>
-        const dialogRef = document.getElementById('myDialog');
-
-        function openDialog() {
-            dialogRef.showModal();
-        }
-        function closeDialog() {
-            dialogRef.close();
-        }
-    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
